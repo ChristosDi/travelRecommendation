@@ -1,0 +1,98 @@
+/* Navigation bar container */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #333333;
+    /* Dark gray background */
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Logo section */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 30px;
+    /* Size for airplane icon */
+    margin-right: 10px;
+}
+
+.logo span {
+    color: #FFFFFF;
+    /* White text */
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+/* Navigation links */
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    /* Spacing between links */
+    margin-left: 20px;
+    /* Space from logo */
+}
+
+ul a {
+    color: #FFFFFF;
+    /* White text */
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Search bar form */
+form {
+    margin-left: auto;
+    /* Push to the right */
+    display: flex;
+    align-items: center;
+}
+
+form input {
+    width: 200px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    /* Subtle border */
+    background-color: #FFFFFF;
+    /* White background */
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+form input::placeholder {
+    color: #808080;
+    /* Gray placeholder text */
+}
+
+/* Buttons general styling */
+form button {
+    padding: 5px 15px;
+    margin-left: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #008080;
+    /* Teal background */
+    color: #FFFFFF;
+    /* White text */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Search button with magnifying glass icon */
+form button.search-button {
+    background: #008080 url('magnifying-glass.png') no-repeat 5px center;
+    padding-left: 25px;
+    /* Extra padding for icon */
+}
