@@ -1,98 +1,136 @@
-/* Navigation bar container */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    /* Light gray background to contrast the nav bar */
+}
+
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #333333;
-    /* Dark gray background */
     display: flex;
+    /* Places items (logo, nav links, form) in a row */
     align-items: center;
-    padding: 0 20px;
+    /* Vertically centers items within nav */
+    justify-content: space-between;
+    /* Distributes space so left, middle, right sections are separated */
+    background-color: #1f2937;
+    /* Dark background color (charcoal) */
+    padding: 10px 20px;
+    /* Space inside the nav to keep content from edges */
 }
 
-/* Logo section */
-.logo {
+nav .logo {
     display: flex;
+    /* Place the image and text in a horizontal row */
     align-items: center;
+    /* Vertically center the logo image and text */
 }
 
-.logo img {
-    height: 30px;
-    /* Size for airplane icon */
-    margin-right: 10px;
+nav .logo img {
+    height: 50px;
+    /* Control the size of the logo image */
+    margin-right: 8px;
+    /* Space between image and text */
 }
 
-.logo span {
-    color: #FFFFFF;
-    /* White text */
-    font-family: Arial, sans-serif;
-    font-size: 18px;
+
+nav .logo span {
+    color: #ffffff;
+    /* White text to contrast the dark background */
+    font-size: 1.5rem;
+    /* Make the text larger */
+    font-weight: bold;
+    /* Make it stand out */
 }
 
-/* Navigation links */
-ul {
+nav ul {
     list-style: none;
+    /* Remove bullet points from list items */
     display: flex;
-    gap: 20px;
-    /* Spacing between links */
-    margin-left: 20px;
-    /* Space from logo */
+    /* Place list items in a row */
+    gap: 50px;
+    /* Space between each list item */
 }
 
-ul a {
-    color: #FFFFFF;
-    /* White text */
+nav ul li a {
+    color: #ffffff;
+    /* White text on dark background */
     text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
+    /* Remove default underline from links */
+    font-size: 1rem;
+    /* Base font size for readability */
+    transition: color 0.3s ease;
+    /* Smooth transition for hover effect */
 }
 
-/* Search bar form */
-form {
-    margin-left: auto;
-    /* Push to the right */
+nav ul li a:hover {
+    color: #d1d5db;
+    /* Lighter gray on hover */
+}
+
+nav form {
     display: flex;
+    /* Align the input and buttons in a row */
     align-items: center;
+    /* Vertically center them */
+    gap: 10px;
+    /* Spacing between the input and buttons */
+    background-color: #ffffff;
+
+    padding: 10px ;
+    /*padding-left: 120px;*/
+    /*padding-right: 10px;*/  
+    border-radius: 100px;
 }
 
-form input {
-    width: 200px;
+/*magnifying glass icon*/
+nav form img {
+    height: 20px;
+    margin-right: 8px;
+}
+
+nav form input[type="text"] {
+    margin-right: 0px;
     padding: 5px 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    /* Subtle border */
-    background-color: #FFFFFF;
-    /* White background */
-    color: #000000;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
+    width: 300px;
+    transform-origin: right center;
+    height: 30px;
+    /* Give some space inside the text field */
+    border: 1px #ccc;
+    /* Light border */
+    border-radius: 4px;
+    /* Rounded corners */
+    outline: none; /* Removes the default focus outline in some browsers */
 }
 
-form input::placeholder {
-    color: #808080;
-    /* Gray placeholder text */
-}
-
-/* Buttons general styling */
-form button {
-    padding: 5px 15px;
-    margin-left: 5px;
-    border-radius: 5px;
+nav form button {
+    padding: 09px 15px;
+    /* Spacing for button text */
     border: none;
-    background-color: #008080;
-    /* Teal background */
-    color: #FFFFFF;
-    /* White text */
-    font-family: Arial, sans-serif;
-    font-size: 14px;
+    /* Remove default button border */
+    border-radius: 4px;
+    /* Rounded corners to match input */
     cursor: pointer;
+    /* Cursor changes to pointer on hover */
+    color: #ffffff;
+    /* White text for contrast */
 }
 
-/* Search button with magnifying glass icon */
-form button.search-button {
-    background: #008080 url('magnifying-glass.png') no-repeat 5px center;
-    padding-left: 25px;
-    /* Extra padding for icon */
+nav form button[type="submit"] {
+    background-color: #256683;
+    /* Blue background for the "Search" button */
+}
+
+nav form button[type="button"] {
+    background-color: #256683;
+    /* Red background for the "Clear" button */
+}
+
+nav form button:hover {
+    opacity: 0.8;
+    /* Slight fade on hover */
 }
