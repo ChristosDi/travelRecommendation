@@ -108,7 +108,7 @@ nav form input[type="text"] {
 }
 
 nav form button {
-    padding: 09px 15px;
+    padding: 09px 10px;
     /* Spacing for button text */
     border: none;
     /* Remove default button border */
@@ -118,6 +118,7 @@ nav form button {
     /* Cursor changes to pointer on hover */
     color: #ffffff;
     /* White text for contrast */
+    margin: 0px 02px;
 }
 
 nav form button[type="submit"] {
@@ -133,4 +134,81 @@ nav form button[type="button"] {
 nav form button:hover {
     opacity: 0.8;
     /* Slight fade on hover */
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Full viewport height */
+    background: url("travelRecommendation_images/travelRecommendation-background.webp") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    /* Enables flex positioning for .hero-content */
+    align-items: center;
+    /* Vertically center the content */
+    justify-content: flex-start;
+    /* Place content at the left side */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Adjust the opacity as desired */
+    z-index: 1;
+    /* Place it behind hero-content but in front of background */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    /* Above the overlay */
+    text-align: left;
+    /* or center, depending on your design preference */
+    max-width: 600px;
+    /* Control how wide the text column is */
+    color: #fff;
+    /* White text to contrast the dark overlay */
+    padding: 0 20px;
+    /* Some horizontal padding for small screens */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* optional style choice */
+    line-height: 1.2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    /* Adds clarity on bright images */
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Call-to-action button */
+.cta-button {
+    background-color: #3b82f6;
+    /* Blue button color */
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2563eb;
+    /* Darker shade on hover */
 }
