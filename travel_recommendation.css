@@ -190,6 +190,17 @@ nav form button:hover {
         /* Centers the container vertically at 50% */
 }
 
+.hero-content h1,
+.hero-content p,
+.hero-content .cta-button {
+    margin-bottom: 30px;
+    margin-left: 120px;
+    transform: translateY(-10%);
+    /* Centers the container vertically at 50% */
+}
+
+
+
 .hero-content h1 {
     font-size: 4rem;
     
