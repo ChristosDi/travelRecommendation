@@ -1,19 +1,16 @@
+/*All page*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-size: cover; /*Check later to make background size available in all monitor sizes- at least 3*/
 }
-
-background-size: cover;
-
-
 body {
     font-family: Arial, sans-serif;
     font-size: 100%;
     background: #f0f0f0;
     /* Light gray background to contrast the nav bar */
 }
-
 nav {
     display: flex;
     /* Places items (logo, nav links, form) in a row */
@@ -26,22 +23,18 @@ nav {
     padding: 10px 20px;
     /* Space inside the nav to keep content from edges */
 }
-
 nav .logo {
     display: flex;
     /* Place the image and text in a horizontal row */
     align-items: center;
     /* Vertically center the logo image and text */
 }
-
 nav .logo img {
     height: 50px;
     /* Control the size of the logo image */
     margin-right: 8px;
     /* Space between image and text */
 }
-
-
 nav .logo span {
     color: #ffffff;
     /* White text to contrast the dark background */
@@ -50,7 +43,6 @@ nav .logo span {
     font-weight: bold;
     /* Make it stand out */
 }
-
 nav ul {
     list-style: none;
     /* Remove bullet points from list items */
@@ -59,7 +51,6 @@ nav ul {
     gap: 50px;
     /* Space between each list item */
 }
-
 nav ul li a {
     color: #ffffff;
     /* White text on dark background */
@@ -70,12 +61,10 @@ nav ul li a {
     transition: color 0.3s ease;
     /* Smooth transition for hover effect */
 }
-
 nav ul li a:hover {
     color: #d1d5db;
     /* Lighter gray on hover */
 }
-
 nav form {
     display: flex;
     /* Align the input and buttons in a row */
@@ -90,13 +79,11 @@ nav form {
     /*padding-right: 10px;*/  
     border-radius: 100px;
 }
-
 /*magnifying glass icon*/
 nav form img {
     height: 20px;
     margin-right: 8px;
 }
-
 nav form input[type="text"] {
     margin-right: 0px;
     padding: 5px 10px;
@@ -110,7 +97,6 @@ nav form input[type="text"] {
     /* Rounded corners */
     outline: none; /* Removes the default focus outline in some browsers */
 }
-
 nav form button {
     padding: 09px 10px;
     /* Spacing for button text */
@@ -124,22 +110,19 @@ nav form button {
     /* White text for contrast */
     margin: 0px 02px;
 }
-
 nav form button[type="submit"] {
     background-color: #256683;
     /* Blue background for the "Search" button */
 }
-
 nav form button[type="button"] {
     background-color: #256683;
     /* Red background for the "Clear" button */
 }
-
 nav form button:hover {
     opacity: 0.8;
     /* Slight fade on hover */
 }
-
+/*All page*/
 .hero {
     position: relative;
     width: 100%;
@@ -154,7 +137,7 @@ nav form button:hover {
     justify-content: flex-start;
     /* Place content at the left side */
 }
-
+/*All page*/
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -166,7 +149,7 @@ nav form button:hover {
     z-index: 1;
     /* Place it behind hero-content but in front of background */
 }
-
+/*All page*/
 .hero-content {
     position: relative;
     z-index: 2;
@@ -181,26 +164,17 @@ nav form button:hover {
     /* Some horizontal padding for small screens */
 }
 
+/*Home*/
 .hero-content h1,
 .hero-content p,
 .hero-content .cta-button {
     margin-bottom: 30px;
     margin-left: 120px;
-    transform: translateY(-40%);
+    transform: translateY(-70%);
         /* Centers the container vertically at 50% */
 }
 
-.hero-content h1,
-.hero-content p,
-.hero-content .cta-button {
-    margin-bottom: 30px;
-    margin-left: 120px;
-    transform: translateY(-10%);
-    /* Centers the container vertically at 50% */
-}
-
-
-
+/*Home*/
 .hero-content h1 {
     font-size: 4rem;
     
@@ -212,7 +186,7 @@ nav form button:hover {
     /* Adds clarity on bright images */
     opacity: 0.85;
 }
-
+/*Home*/
 .hero-content p {
     font-size: 1.2rem;
     
@@ -220,7 +194,7 @@ nav form button:hover {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.0);
     opacity: 0.85;
 }
-
+/*Home*/
 /* Call-to-action button */
 .cta-button {
     background-color: #3e81b4;
@@ -233,13 +207,13 @@ nav form button:hover {
     font-size: 1rem;
     transition: background-color 0.3s ease;
 }
-
+/*Home*/
 .cta-button:hover {
     background-color: #2563eb;
     /* Darker shade on hover */
 }
-
-/* Social Icons Container */
+/*Home*/
+/* Social Media Icons Container */
 .social-icons {
     position: fixed;
     /* Stay in a fixed position, not scrolling with content */
@@ -260,7 +234,6 @@ nav form button:hover {
     padding-left: 10px;
     
 }
-
 .social-icons::after {
     content: "";
     position: absolute;
@@ -274,7 +247,6 @@ nav form button:hover {
     background-color: #fff;
     /* Color of the line (white in this case) */
 }
-
 /* Individual Icon Styling */
 .social-icons img {
     width: 32px;
