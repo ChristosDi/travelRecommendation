@@ -122,7 +122,7 @@ nav form button:hover {
     opacity: 0.8;
     /* Slight fade on hover */
 }
-/*All page*/
+/*All page HERO*/
 .hero {
     position: relative;
     width: 100%;
@@ -137,7 +137,7 @@ nav form button:hover {
     justify-content: flex-start;
     /* Place content at the left side */
 }
-/*All page*/
+/*All page OVERLAY*/
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -150,8 +150,7 @@ nav form button:hover {
     /* Place it behind hero-content but in front of background */
 }
 /*All page*/
-.hero-content,
-.aboutUsHero-content h1 {
+.hero-content {
     position: relative;
     z-index: 2;
     /* Above the overlay */
@@ -168,15 +167,17 @@ nav form button:hover {
 /*Home+About US content*/
 .hero-content h1,
 .hero-content p,
-.hero-content .cta-button,
-.aboutUsHero-content h1 {
-    margin-bottom: 30px;
+.hero-content .cta-button {
+    position: relative;
+    left: 30px;
+    margin-bottom: 15px;
     margin-left: 120px;
-    transform: translateY(-10%);
+    transform: translateY(-85%);
+    opacity: 0.85;
         /* Centers the container vertically at n% */
 }
 
-/*Home+About US content*/
+/*Home+About US conten*/
 .hero-content h1,
 .aboutUsHero-content h1 {
     font-size: 4rem;
@@ -187,7 +188,7 @@ nav form button:hover {
     line-height: 1.2;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.0);
     /* Adds clarity on bright images */
-    opacity: 0.85;
+    opacity: 0.7;
 }
 /*Home*/
 .hero-content p{
@@ -199,18 +200,41 @@ nav form button:hover {
 }
 
 /*About US content*/
-/* .aboutUsHero-content h1{
-    
-} */
-
+.aboutUsHero-content h1{
+    position: relative;
+    top: -400px;
+    z-index: 2;
+    /* Above the overlay */
+    text-align: left;
+    /* or center, depending on your design preference */
+    max-width: 600px;
+    /* Control how wide the text column is */
+    color: #fff;
+    /* White text to contrast the dark overlay */
+    padding: 0 20px;
+    /* Some horizontal padding for small screens */
+    margin-bottom: 30px;
+    margin-left: 120px;
+    transform: translateY(-10%);
+    /* Centers the container vertically at n% */
+}
 .aboutUsHero-content p{
-    width: 50%;
+    position: relative;
+    width: 70%;
+    bottom: 400px;
+    left: -120px;
     /* Adjust as needed for your design */
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    /* Semi-transparent white for readability */
+    
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #ffffffd0;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        /* Add text shadow for better contrast */
     margin: 0 auto;
     /* Centers horizontally within the flex container */
+    line-height: 1.5;
+    z-index: 1;
 }
 
 /*Home*/
@@ -231,7 +255,7 @@ nav form button:hover {
     background-color: #2563eb;
     /* Darker shade on hover */
 }
-/*Home*/
+
 /* Social Media Icons Container */
 .social-icons {
     position: fixed;
@@ -275,11 +299,102 @@ nav form button:hover {
     cursor: pointer;
     /* Indicates the image is clickable */
 }
-
 /* Hover Effect */
 .social-icons img:hover {
     transform: scale(1.1);
     /* Slightly enlarge icon on hover */
     opacity: 0.8;
     /* Dim or lighten the icon on hover (optional) */
+}
+
+/* Our Team Section */
+.our-team {
+position: relative;
+    margin-top: -800px;
+    /* Position it relative to the paragraph (which has bottom: 400px) */
+    padding: 30px 20px;
+    background-color: transparent;
+    /* Make background transparent to blend with hero */
+    width: 100%;
+    z-index: 2;
+    /* Ensure it's above other elements */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.our-team h2 {
+    position: relative;
+    top: 40px;
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    font-weight: 900;
+    color: #fff;
+    /* White text to match the about us content */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    /* Same shadow as paragraph */
+    width: 200px;
+    text-align: left;
+    padding-right: 30px;
+    margin-left: 220px;
+    line-height: 1.3;
+    opacity: 0.8;
+}
+
+.team-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-left: 80px;
+}
+
+.team-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 250px;
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+    transition: transform 0.3s ease;
+    opacity: 0.8;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+.team-card img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.team-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.team-card p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+}
+
+.role-btn {
+    background-color: #1f3c8c;
+    color: #ffffff;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.role-btn:hover {
+    background-color: #1c4e70;
 }
