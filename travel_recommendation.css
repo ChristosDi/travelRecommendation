@@ -398,3 +398,130 @@ position: relative;
 .role-btn:hover {
     background-color: #1c4e70;
 }
+
+/* Contact Us Page Styling */
+    .contact-us {
+        max-width: 1000px;
+        width: 800px;
+        margin: 80px auto;
+        padding: 30px;
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(2.5px);
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        color: #ffffff;
+        position:absolute;
+        top: 900px;
+        /* Moves the form up by 800px */
+        left: 50%;
+        /* Moves the form 40px to the right */
+        transform: translate(-10%,-500px);
+        z-index: 1000;
+        pointer-events: auto;
+            /* Allows interaction */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 15px;
+        border-radius: 10px;
+        border: 3px solid rgba(255, 255, 255, 0.4);
+        /* Lighter border for subtle visibility */
+        font-size: 1rem;
+        background: rgba(255, 255, 255, 0.1);
+        /* More transparency */
+        color: #ffffff;
+        /* Ensure text is visible */
+        backdrop-filter: blur(10px);
+        /* Slight blur effect */
+        opacity: 0.5;
+        /* Adjust transparency level */
+        transition: opacity 0.3s ease, background 0.3s ease;
+
+    }
+
+
+    /* When input is focused, make it more visible */
+    .form-group input:focus,
+    .form-group textarea:focus {
+        opacity: 1;
+        /* Fully visible when clicked */
+        background: rgba(255, 255, 255, 0.2);
+        /* Slightly less transparent on focus */
+        outline: none;
+        /* Remove default outline */
+        border-color: rgba(255, 255, 255, 0.6);
+        /* Brighter border on focus */
+    }
+
+    /* Placeholder styling for better visibility */
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+        /* Light white placeholder */
+        font-style: italic;
+    }
+
+    /* Ensure input text remains readable */
+    .form-group input:focus::placeholder,
+    .form-group textarea:focus::placeholder {
+        color: rgba(255, 255, 255, 0.4);
+        /* Dim placeholder when typing */
+    }
+    .contact-us h2 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .contact-us p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+        display: block;
+        margin-bottom: 5px;
+        color: #fff;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        font-size: 1rem;
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        height: 120px;
+    }
+
+    .submit-btn {
+        background: #1f3c8c;
+        color: #ffffff;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+        background: #1c4e70;
+    }
