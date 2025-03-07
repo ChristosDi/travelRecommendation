@@ -150,7 +150,8 @@ nav form button:hover {
     /* Place it behind hero-content but in front of background */
 }
 /*All page*/
-.hero-content {
+.hero-content,
+.aboutUsHero-content h1 {
     position: relative;
     z-index: 2;
     /* Above the overlay */
@@ -164,18 +165,20 @@ nav form button:hover {
     /* Some horizontal padding for small screens */
 }
 
-/*Home*/
+/*Home+About US content*/
 .hero-content h1,
 .hero-content p,
-.hero-content .cta-button {
+.hero-content .cta-button,
+.aboutUsHero-content h1 {
     margin-bottom: 30px;
     margin-left: 120px;
-    transform: translateY(-70%);
-        /* Centers the container vertically at 50% */
+    transform: translateY(-10%);
+        /* Centers the container vertically at n% */
 }
 
-/*Home*/
-.hero-content h1 {
+/*Home+About US content*/
+.hero-content h1,
+.aboutUsHero-content h1 {
     font-size: 4rem;
     
     font-weight: 700;
@@ -187,13 +190,29 @@ nav form button:hover {
     opacity: 0.85;
 }
 /*Home*/
-.hero-content p {
+.hero-content p{
     font-size: 1.2rem;
     
     line-height: 1.5;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.0);
     opacity: 0.85;
 }
+
+/*About US content*/
+/* .aboutUsHero-content h1{
+    
+} */
+
+.aboutUsHero-content p{
+    width: 50%;
+    /* Adjust as needed for your design */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Semi-transparent white for readability */
+    margin: 0 auto;
+    /* Centers horizontally within the flex container */
+}
+
 /*Home*/
 /* Call-to-action button */
 .cta-button {
