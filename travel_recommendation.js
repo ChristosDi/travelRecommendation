@@ -106,4 +106,87 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
     pageContent.innerHTML = contactContent;
   });
+  /**
+   * END OF DYNAMICALLY CHANGED BUTTONS
+*/
+
+/**
+ * START OF SLIDESHOW
+*/
+
+// ----- Keyword Search & Data Fetching Logic -----
+const searchForm = document.querySelector("nav form");
+const searchInput = searchForm.querySelector("input[name='search']");
+const clearButton = searchForm.querySelector("button[type='button']");
+
+ searchForm.addEventListener("submit", function (event) {
+   event.preventDefault();
+   const keyword = searchInput.value.trim().toLowerCase();
+
+   // Fetch data from the JSON file
+   fetch("travel_recommendation_api.json")
+   .then(response => response.json())
+      .then(data => {
+        let results = [];
+        
+        // Check for keyword variations for "beach" (handles beach, beaches, etc.)
+        if (keyword.includes("beach")) {
+          results = results.concat(data.beaches);
+        }
+        
+        // Check for keyword variations for "temple" (handles temple, temples, etc.)
+        if (keyword.includes("temple")) {
+          results = results.concat(data.temples);
+        }
+
+        // Search in country names and their cities
+        data.countries.forEach(country => {
+          if (country.name.toLowerCase().includes(keyword)) {
+            // If a country name matches, add all its cities
+            results = results.concat(country.cities);
+          } else {
+            // Otherwise, check if any city within the country matches the keyword
+            country.cities.forEach(city => {
+              if (
+                city.name.toLowerCase().includes(keyword) ||
+                city.description.toLowerCase().includes(keyword)
+              ) {
+                results.push(city);
+              }
+            });
+          }
+        });
+
+        displayResults(results);
+      })
+      .catch(error => {
+        console.error("Error fetching travel data: ", error);
+      });
+  });
+
+  // Clear the search field and reset the content if desired.
+  clearButton.addEventListener("click", function () {
+    searchInput.value = "";
+    pageContent.innerHTML = homeContent;
+  });
+  
+  // Function to display search results dynamically.
+  function displayResults(results) {
+    let html = "";
+    if (results.length === 0) {
+      html = "<p>No results found for your search.</p>";
+    } else {
+      results.forEach(item => {
+        html += `
+        <div class="recommendation-card">
+            <img src="${item.imageUrl}" alt="${item.name}">
+            <h3>${item.name}</h3>
+            <p>${item.description}</p>
+            </div>
+            `;
+      });
+    }
+    pageContent.innerHTML = html;
+  }
+
 });

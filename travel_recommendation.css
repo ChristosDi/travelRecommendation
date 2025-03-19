@@ -1,527 +1,525 @@
 /*All page*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-size: cover; /*Check later to make background size available in all monitor sizes- at least 3*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-size: cover; /*Check later to make background size available in all monitor sizes- at least 3*/
 }
 body {
-    font-family: Arial, sans-serif;
-    font-size: 100%;
-    background: #f0f0f0;
-    /* Light gray background to contrast the nav bar */
+  font-family: Arial, sans-serif;
+  font-size: 100%;
+  background: #f0f0f0;
+  /* Light gray background to contrast the nav bar */
 }
 nav {
-    display: flex;
-    /* Places items (logo, nav links, form) in a row */
-    align-items: center;
-    /* Vertically centers items within nav */
-    justify-content: space-between;
-    /* Distributes space so left, middle, right sections are separated */
-    background-color: #1f2937;
-    /* Dark background color (charcoal) */
-    padding: 10px 20px;
-    /* Space inside the nav to keep content from edges */
+  display: flex;
+  /* Places items (logo, nav links, form) in a row */
+  align-items: center;
+  /* Vertically centers items within nav */
+  justify-content: space-between;
+  /* Distributes space so left, middle, right sections are separated */
+  background-color: #1f2937;
+  /* Dark background color (charcoal) */
+  padding: 10px 20px;
+  /* Space inside the nav to keep content from edges */
 }
 nav .logo {
-    display: flex;
-    /* Place the image and text in a horizontal row */
-    align-items: center;
-    /* Vertically center the logo image and text */
+  display: flex;
+  /* Place the image and text in a horizontal row */
+  align-items: center;
+  /* Vertically center the logo image and text */
 }
 nav .logo img {
-    height: 50px;
-    /* Control the size of the logo image */
-    margin-right: 8px;
-    /* Space between image and text */
+  height: 50px;
+  /* Control the size of the logo image */
+  margin-right: 8px;
+  /* Space between image and text */
 }
 nav .logo span {
-    color: #ffffff;
-    /* White text to contrast the dark background */
-    font-size: 1.5rem;
-    /* Make the text larger */
-    font-weight: bold;
-    /* Make it stand out */
+  color: #ffffff;
+  /* White text to contrast the dark background */
+  font-size: 1.5rem;
+  /* Make the text larger */
+  font-weight: bold;
+  /* Make it stand out */
 }
 nav ul {
-    list-style: none;
-    /* Remove bullet points from list items */
-    display: flex;
-    /* Place list items in a row */
-    gap: 50px;
-    /* Space between each list item */
+  list-style: none;
+  /* Remove bullet points from list items */
+  display: flex;
+  /* Place list items in a row */
+  gap: 50px;
+  /* Space between each list item */
 }
 nav ul li a {
-    color: #ffffff;
-    /* White text on dark background */
-    text-decoration: none;
-    /* Remove default underline from links */
-    font-size: 1rem;
-    /* Base font size for readability */
-    transition: color 0.3s ease;
-    /* Smooth transition for hover effect */
+  color: #ffffff;
+  /* White text on dark background */
+  text-decoration: none;
+  /* Remove default underline from links */
+  font-size: 1rem;
+  /* Base font size for readability */
+  transition: color 0.3s ease;
+  /* Smooth transition for hover effect */
 }
 nav ul li a:hover {
-    color: #d1d5db;
-    /* Lighter gray on hover */
+  color: #d1d5db;
+  /* Lighter gray on hover */
 }
 nav form {
-    display: flex;
-    /* Align the input and buttons in a row */
-    align-items: center;
-    /* Vertically center them */
-    gap: 10px;
-    /* Spacing between the input and buttons */
-    background-color: #ffffff;
+  display: flex;
+  /* Align the input and buttons in a row */
+  align-items: center;
+  /* Vertically center them */
+  gap: 10px;
+  /* Spacing between the input and buttons */
+  background-color: #ffffff;
 
-    padding: 10px ;
-    /*padding-left: 120px;*/
-    /*padding-right: 10px;*/  
-    border-radius: 100px;
+  padding: 10px;
+  /*padding-left: 120px;*/
+  /*padding-right: 10px;*/
+  border-radius: 100px;
 }
 /*magnifying glass icon*/
 nav form img {
-    height: 20px;
-    margin-right: 8px;
+  height: 20px;
+  margin-right: 8px;
 }
 nav form input[type="text"] {
-    margin-right: 0px;
-    padding: 5px 10px;
-    width: 300px;
-    transform-origin: right center;
-    height: 30px;
-    /* Give some space inside the text field */
-    border: 1px #ccc;
-    /* Light border */
-    border-radius: 4px;
-    /* Rounded corners */
-    outline: none; /* Removes the default focus outline in some browsers */
+  margin-right: 0px;
+  padding: 5px 10px;
+  width: 300px;
+  transform-origin: right center;
+  height: 30px;
+  /* Give some space inside the text field */
+  border: 1px #ccc;
+  /* Light border */
+  border-radius: 4px;
+  /* Rounded corners */
+  outline: none; /* Removes the default focus outline in some browsers */
 }
 nav form button {
-    padding: 09px 10px;
-    /* Spacing for button text */
-    border: none;
-    /* Remove default button border */
-    border-radius: 4px;
-    /* Rounded corners to match input */
-    cursor: pointer;
-    /* Cursor changes to pointer on hover */
-    color: #ffffff;
-    /* White text for contrast */
-    margin: 0px 02px;
+  padding: 09px 10px;
+  /* Spacing for button text */
+  border: none;
+  /* Remove default button border */
+  border-radius: 4px;
+  /* Rounded corners to match input */
+  cursor: pointer;
+  /* Cursor changes to pointer on hover */
+  color: #ffffff;
+  /* White text for contrast */
+  margin: 0px 02px;
 }
 nav form button[type="submit"] {
-    background-color: #256683;
-    /* Blue background for the "Search" button */
+  background-color: #256683;
+  /* Blue background for the "Search" button */
 }
 nav form button[type="button"] {
-    background-color: #256683;
-    /* Red background for the "Clear" button */
+  background-color: #256683;
+  /* Red background for the "Clear" button */
 }
 nav form button:hover {
-    opacity: 0.8;
-    /* Slight fade on hover */
+  opacity: 0.8;
+  /* Slight fade on hover */
 }
 /*All page HERO*/
 .hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    /* Full viewport height */
-    background: url("travelRecommendation_images/travelRecommendation-background.webp") no-repeat center center;
-    background-size: cover;
-    display: flex;
-    /* Enables flex positioning for .hero-content */
-    align-items: center;
-    /* Vertically center the content */
-    justify-content: flex-start;
-    /* Place content at the left side */
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* Full viewport height */
+  background: url("travelRecommendation_images/travelRecommendation-background.webp")
+    no-repeat center center;
+  background-size: cover;
+  display: flex;
+  /* Enables flex positioning for .hero-content */
+  align-items: center;
+  /* Vertically center the content */
+  justify-content: flex-start;
+  /* Place content at the left side */
 }
 /*All page OVERLAY*/
 .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    /* Adjust the opacity as desired */
-    z-index: 1;
-    /* Place it behind hero-content but in front of background */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* Adjust the opacity as desired */
+  z-index: 1;
+  /* Place it behind hero-content but in front of background */
 }
 /*All page*/
 .hero-content {
-    position: relative;
-    z-index: 2;
-    /* Above the overlay */
-    text-align: left;
-    /* or center, depending on your design preference */
-    max-width: 600px;
-    /* Control how wide the text column is */
-    color: #fff;
-    /* White text to contrast the dark overlay */
-    padding: 0 20px;
-    /* Some horizontal padding for small screens */
+  position: relative;
+  z-index: 2;
+  /* Above the overlay */
+  text-align: left;
+  /* or center, depending on your design preference */
+  max-width: 600px;
+  /* Control how wide the text column is */
+  color: #fff;
+  /* White text to contrast the dark overlay */
+  padding: 0 20px;
+  /* Some horizontal padding for small screens */
 }
 
 /*Home+About US content*/
 .hero-content h1,
 .hero-content p,
 .hero-content .cta-button {
-    position: relative;
-    left: 30px;
-    margin-bottom: 15px;
-    margin-left: 120px;
-    transform: translateY(-85%);
-    opacity: 0.85;
-        /* Centers the container vertically at n% */
+  position: relative;
+  left: 30px;
+  margin-bottom: 15px;
+  margin-left: 120px;
+  transform: translateY(-85%);
+  opacity: 0.85;
+  /* Centers the container vertically at n% */
 }
 
 /*Home+About US conten*/
 .hero-content h1,
 .aboutUsHero-content h1 {
-    font-size: 4rem;
-    
-    font-weight: 700;
-    text-transform: uppercase;
-    /* optional style choice */
-    line-height: 1.2;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.0);
-    /* Adds clarity on bright images */
-    opacity: 0.7;
+  font-size: 4rem;
+
+  font-weight: 700;
+  text-transform: uppercase;
+  /* optional style choice */
+  line-height: 1.2;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0);
+  /* Adds clarity on bright images */
+  opacity: 0.7;
 }
 /*Home*/
-.hero-content p{
-    font-size: 1.2rem;
-    
-    line-height: 1.5;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.0);
-    opacity: 0.85;
+.hero-content p {
+  font-size: 1.2rem;
+
+  line-height: 1.5;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0);
+  opacity: 0.85;
 }
 
 /*About US content*/
-.aboutUsHero-content h1{
-    position: relative;
-    top: -400px;
-    z-index: 2;
-    /* Above the overlay */
-    text-align: left;
-    /* or center, depending on your design preference */
-    max-width: 600px;
-    /* Control how wide the text column is */
-    color: #fff;
-    /* White text to contrast the dark overlay */
-    padding: 0 20px;
-    /* Some horizontal padding for small screens */
-    margin-bottom: 30px;
-    margin-left: 120px;
-    transform: translateY(-10%);
-    /* Centers the container vertically at n% */
+.aboutUsHero-content h1 {
+  position: relative;
+  top: -400px;
+  z-index: 2;
+  /* Above the overlay */
+  text-align: left;
+  /* or center, depending on your design preference */
+  max-width: 600px;
+  /* Control how wide the text column is */
+  color: #fff;
+  /* White text to contrast the dark overlay */
+  padding: 0 20px;
+  /* Some horizontal padding for small screens */
+  margin-bottom: 30px;
+  margin-left: 120px;
+  transform: translateY(-10%);
+  /* Centers the container vertically at n% */
 }
-.aboutUsHero-content p{
-    position: relative;
-    width: 70%;
-    bottom: 400px;
-    left: -120px;
-    /* Adjust as needed for your design */
-    
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: #ffffffd0;
-    font-weight: 500;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-        /* Add text shadow for better contrast */
-    margin: 0 auto;
-    /* Centers horizontally within the flex container */
-    line-height: 1.5;
-    z-index: 1;
+.aboutUsHero-content p {
+  position: relative;
+  width: 70%;
+  bottom: 400px;
+  left: -120px;
+  /* Adjust as needed for your design */
+
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffffd0;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  /* Add text shadow for better contrast */
+  margin: 0 auto;
+  /* Centers horizontally within the flex container */
+  line-height: 1.5;
+  z-index: 1;
 }
 
 /*Home*/
 /* Call-to-action button */
 .cta-button {
-    background-color: #3e81b4;
-    /* Blue button color */
-    color: #fff;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
+  background-color: #3e81b4;
+  /* Blue button color */
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 /*Home*/
 .cta-button:hover {
-    background-color: #2563eb;
-    /* Darker shade on hover */
+  background-color: #2563eb;
+  /* Darker shade on hover */
 }
 
 /* Social Media Icons Container */
 .social-icons {
-    position: fixed;
-    /* Stay in a fixed position, not scrolling with content */
-    top: 52%;
-    /* Position from the top of the page */
-    left: 20px;
-    /* Position from the left side of the page */
-    transform: translateY(-70%);
-    /* Centers the container vertically at 50% */
-    display: flex;
-    /* Arrange icons in a column (vertical) */
-    flex-direction: column;
-    gap: 15px;
-    /* Space between each icon */
-    z-index: 999;
-    /* Keep them on top of other elements */
-    padding-top: 60px;
-    padding-left: 10px;
-    
+  position: fixed;
+  /* Stay in a fixed position, not scrolling with content */
+  top: 52%;
+  /* Position from the top of the page */
+  left: 20px;
+  /* Position from the left side of the page */
+  transform: translateY(-70%);
+  /* Centers the container vertically at 50% */
+  display: flex;
+  /* Arrange icons in a column (vertical) */
+  flex-direction: column;
+  gap: 15px;
+  /* Space between each icon */
+  z-index: 999;
+  /* Keep them on top of other elements */
+  padding-top: 60px;
+  padding-left: 10px;
 }
 .social-icons::after {
-    content: "";
-    position: absolute;
-    top: 30px;
-    bottom: -10px;
-    right: -30px;
-    
-    /* Position the line relative to the container (adjust as needed) */
-    width: 2px;
-    /* Thickness of the line */
-    background-color: #fff;
-    /* Color of the line (white in this case) */
+  content: "";
+  position: absolute;
+  top: 30px;
+  bottom: -10px;
+  right: -30px;
+
+  /* Position the line relative to the container (adjust as needed) */
+  width: 2px;
+  /* Thickness of the line */
+  background-color: #fff;
+  /* Color of the line (white in this case) */
 }
 /* Individual Icon Styling */
 .social-icons img {
-    width: 32px;
-    /* Adjust size as desired */
-    height: 32px;
-    transition: transform 0.3s, opacity 0.3s;
-    cursor: pointer;
-    /* Indicates the image is clickable */
+  width: 32px;
+  /* Adjust size as desired */
+  height: 32px;
+  transition: transform 0.3s, opacity 0.3s;
+  cursor: pointer;
+  /* Indicates the image is clickable */
 }
 /* Hover Effect */
 .social-icons img:hover {
-    transform: scale(1.1);
-    /* Slightly enlarge icon on hover */
-    opacity: 0.8;
-    /* Dim or lighten the icon on hover (optional) */
+  transform: scale(1.1);
+  /* Slightly enlarge icon on hover */
+  opacity: 0.8;
+  /* Dim or lighten the icon on hover (optional) */
 }
 
 /* Our Team Section */
 .our-team {
-position: relative;
-    margin-top: -800px;
-    /* Position it relative to the paragraph (which has bottom: 400px) */
-    padding: 30px 20px;
-    background-color: transparent;
-    /* Make background transparent to blend with hero */
-    width: 100%;
-    z-index: 2;
-    /* Ensure it's above other elements */
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
+  position: relative;
+  margin-top: -800px;
+  /* Position it relative to the paragraph (which has bottom: 400px) */
+  padding: 30px 20px;
+  background-color: transparent;
+  /* Make background transparent to blend with hero */
+  width: 100%;
+  z-index: 2;
+  /* Ensure it's above other elements */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .our-team h2 {
-    position: relative;
-    top: 40px;
-    font-size: 3.5rem;
-    margin-bottom: 30px;
-    font-weight: 900;
-    color: #fff;
-    /* White text to match the about us content */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-    /* Same shadow as paragraph */
-    width: 200px;
-    text-align: left;
-    padding-right: 30px;
-    margin-left: 220px;
-    line-height: 1.3;
-    opacity: 0.8;
+  position: relative;
+  top: 40px;
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+  font-weight: 900;
+  color: #fff;
+  /* White text to match the about us content */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  /* Same shadow as paragraph */
+  width: 200px;
+  text-align: left;
+  padding-right: 30px;
+  margin-left: 220px;
+  line-height: 1.3;
+  opacity: 0.8;
 }
 
 .team-cards {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-left: 80px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-left: 80px;
 }
 
 .team-card {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(15px);
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    width: 250px;
-    padding: 20px;
-    color: #ffffff;
-    text-align: center;
-    transition: transform 0.3s ease;
-    opacity: 0.8;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  width: 250px;
+  padding: 20px;
+  color: #ffffff;
+  text-align: center;
+  transition: transform 0.3s ease;
+  opacity: 0.8;
 }
 
 .team-card:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 .team-card img {
-    width: 60px;
-    margin-bottom: 10px;
+  width: 60px;
+  margin-bottom: 10px;
 }
 
 .team-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 5px;
-    color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: #ffffff;
 }
 
 .team-card p {
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-    color: #e0e0e0;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  color: #e0e0e0;
 }
 
 .role-btn {
-    background-color: #1f3c8c;
-    color: #ffffff;
-    padding: 8px 20px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease;
+  background-color: #1f3c8c;
+  color: #ffffff;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
 }
 
 .role-btn:hover {
-    background-color: #1c4e70;
+  background-color: #1c4e70;
 }
 
 /* Contact Us Page Styling */
-    .contact-us {
-        max-width: 1000px;
-        width: 800px;
-        margin: 80px auto;
-        padding: 30px;
-        background: rgba(0, 0, 0, 0.2);
-        backdrop-filter: blur(2.5px);
-        border-radius: 15px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        text-align: center;
-        color: #ffffff;
-        position:absolute;
-        top: 900px;
-        /* Moves the form up by 800px */
-        left: 50%;
-        /* Moves the form 40px to the right */
-        transform: translate(-10%,-500px);
-        z-index: 1000;
-        pointer-events: auto;
-            /* Allows interaction */
-    }
+.contact-us {
+  max-width: 1000px;
+  width: 800px;
+  margin: 80px auto;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2.5px);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #ffffff;
+  position: absolute;
+  top: 900px;
+  /* Moves the form up by 800px */
+  left: 50%;
+  /* Moves the form 40px to the right */
+  transform: translate(-10%, -500px);
+  z-index: 1000;
+  pointer-events: auto;
+  /* Allows interaction */
+}
 
-    .form-group input,
-    .form-group textarea {
-        width: 100%;
-        padding: 15px;
-        border-radius: 10px;
-        border: 3px solid rgba(255, 255, 255, 0.4);
-        /* Lighter border for subtle visibility */
-        font-size: 1rem;
-        background: rgba(255, 255, 255, 0.1);
-        /* More transparency */
-        color: #ffffff;
-        /* Ensure text is visible */
-        backdrop-filter: blur(10px);
-        /* Slight blur effect */
-        opacity: 0.5;
-        /* Adjust transparency level */
-        transition: opacity 0.3s ease, background 0.3s ease;
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  /* Lighter border for subtle visibility */
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  /* More transparency */
+  color: #ffffff;
+  /* Ensure text is visible */
+  backdrop-filter: blur(10px);
+  /* Slight blur effect */
+  opacity: 0.5;
+  /* Adjust transparency level */
+  transition: opacity 0.3s ease, background 0.3s ease;
+}
 
-    }
+/* When input is focused, make it more visible */
+.form-group input:focus,
+.form-group textarea:focus {
+  opacity: 1;
+  /* Fully visible when clicked */
+  background: rgba(255, 255, 255, 0.2);
+  /* Slightly less transparent on focus */
+  outline: none;
+  /* Remove default outline */
+  border-color: rgba(255, 255, 255, 0.6);
+  /* Brighter border on focus */
+}
 
+/* Placeholder styling for better visibility */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  /* Light white placeholder */
+  font-style: italic;
+}
 
-    /* When input is focused, make it more visible */
-    .form-group input:focus,
-    .form-group textarea:focus {
-        opacity: 1;
-        /* Fully visible when clicked */
-        background: rgba(255, 255, 255, 0.2);
-        /* Slightly less transparent on focus */
-        outline: none;
-        /* Remove default outline */
-        border-color: rgba(255, 255, 255, 0.6);
-        /* Brighter border on focus */
-    }
+/* Ensure input text remains readable */
+.form-group input:focus::placeholder,
+.form-group textarea:focus::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  /* Dim placeholder when typing */
+}
+.contact-us h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
 
-    /* Placeholder styling for better visibility */
-    .form-group input::placeholder,
-    .form-group textarea::placeholder {
-        color: rgba(255, 255, 255, 0.6);
-        /* Light white placeholder */
-        font-style: italic;
-    }
+.contact-us p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
 
-    /* Ensure input text remains readable */
-    .form-group input:focus::placeholder,
-    .form-group textarea:focus::placeholder {
-        color: rgba(255, 255, 255, 0.4);
-        /* Dim placeholder when typing */
-    }
-    .contact-us h2 {
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-    }
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
 
-    .contact-us p {
-        font-size: 1rem;
-        margin-bottom: 20px;
-    }
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
 
-    .contact-form {
-        display: flex;
-        flex-direction: column;
-    }
+.form-group label {
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+}
 
-    .form-group {
-        margin-bottom: 15px;
-        text-align: left;
-    }
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
 
-    .form-group label {
-        font-size: 1rem;
-        display: block;
-        margin-bottom: 5px;
-        color: #fff;
-    }
+.form-group textarea {
+  resize: vertical;
+  height: 120px;
+}
 
-    .form-group input,
-    .form-group textarea {
-        width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-        border: none;
-        font-size: 1rem;
-    }
+.submit-btn {
+  background: #1f3c8c;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 
-    .form-group textarea {
-        resize: vertical;
-        height: 120px;
-    }
-
-    .submit-btn {
-        background: #1f3c8c;
-        color: #ffffff;
-        padding: 10px 20px;
-        font-size: 1rem;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background 0.3s ease;
-    }
-
-    .submit-btn:hover {
-        background: #1c4e70;
-    }
+.submit-btn:hover {
+  background: #1c4e70;
+}
