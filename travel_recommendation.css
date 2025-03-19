@@ -523,3 +523,49 @@ nav form button:hover {
 .submit-btn:hover {
   background: #1c4e70;
 }
+
+/**Recommendation cards**/
+
+.hero {
+  position: relative;
+}
+
+.recommendations-home {
+  position: absolute;
+  top: 45%;
+  right: 420px;
+  width: 320px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 3;
+}
+
+/* Style for individual recommendation cards */
+.recommendation-card {
+  background: #ffffff5c;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+}
+
+.recommendation-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.recommendation-card h3 {
+  margin: 10px 0 5px;
+  color: #000000;
+  font-size: 1.2rem;
+}
+
+.recommendation-card p {
+  margin: 0 10px 15px;
+  color: #111111;
+  font-size: 0.95rem;
+}

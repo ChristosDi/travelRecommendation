@@ -171,22 +171,49 @@ const clearButton = searchForm.querySelector("button[type='button']");
   });
   
   // Function to display search results dynamically.
-  function displayResults(results) {
-    let html = "";
-    if (results.length === 0) {
-      html = "<p>No results found for your search.</p>";
-    } else {
-      results.forEach(item => {
-        html += `
-        <div class="recommendation-card">
+function displayResults(results) {
+  // Check if we are on the home page by verifying if the hero section exists.
+  const heroSection = document.querySelector(".hero");
+  if (!heroSection) {
+    // If not on the home page, fallback to replacing the pageContent.
+    document.getElementById("pageContent").innerHTML = results.length
+      ? results.map(item => `
+          <div class="recommendation-card">
             <img src="${item.imageUrl}" alt="${item.name}">
             <h3>${item.name}</h3>
             <p>${item.description}</p>
-            </div>
-            `;
-      });
-    }
-    pageContent.innerHTML = html;
+          </div>
+        `).join("")
+      : "<p>No results found for your search.</p>";
+    return;
   }
+
+  // If on the home page, do not alter your hero-content.
+  // Instead, check if a recommendations container already exists; if not, create one.
+  let recContainer = document.querySelector(".recommendations-home");
+  if (!recContainer) {
+    recContainer = document.createElement("div");
+    recContainer.classList.add("recommendations-home");
+    // Append the container to the hero section (it will be positioned absolutely via CSS)
+    heroSection.appendChild(recContainer);
+  }
+
+  // Build the HTML for the recommendation cards.
+  let html = "";
+  if (results.length === 0) {
+    html = "<p>No results found for your search.</p>";
+  } else {
+    results.forEach(item => {
+      html += `
+        <div class="recommendation-card">
+          <img src="${item.imageUrl}" alt="${item.name}">
+          <h3>${item.name}</h3>
+          <p>${item.description}</p>
+        </div>
+      `;
+    });
+  }
+  recContainer.innerHTML = html;
+}
 
 });
