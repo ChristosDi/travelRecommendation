@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+  let currentPage = "home";
+
   // Get references to navigation links and the dynamic content container.
   const homeLink = document.getElementById("homeLink");
   const aboutLink = document.getElementById("aboutLink");
@@ -94,17 +96,26 @@ document.addEventListener("DOMContentLoaded", function () {
   // Set up event listeners to swap out the content.
   homeLink.addEventListener("click", function (event) {
     event.preventDefault();
+    currentPage = "home";
     pageContent.innerHTML = homeContent;
+    document.getElementById("recommendation-wrapper").style.display = "none";
+
   });
 
   aboutLink.addEventListener("click", function (event) {
     event.preventDefault();
+    currentPage = "about";
     pageContent.innerHTML = aboutContent;
+    document.getElementById("recommendation-wrapper").style.display = "none";
+
   });
 
   contactLink.addEventListener("click", function (event) {
     event.preventDefault();
+    currentPage = "contact";
     pageContent.innerHTML = contactContent;
+    document.getElementById("recommendation-wrapper").style.display = "none";
+
   });
   /**
    * END OF DYNAMICALLY CHANGED BUTTONS
@@ -121,6 +132,10 @@ const clearButton = searchForm.querySelector("button[type='button']");
 
  searchForm.addEventListener("submit", function (event) {
    event.preventDefault();
+   if (currentPage !== "home") {
+    console.log("Search is only available on the Home page.");
+    return;
+  }
    const keyword = searchInput.value.trim().toLowerCase();
 
    // Fetch data from the JSON file
